@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Streamlit local secrets
+.streamlit/secrets.toml
+
+# Local Excel backup files
+*.xlsx
+
+# Local session state
+*.json
+
+# Environment files
+.env
