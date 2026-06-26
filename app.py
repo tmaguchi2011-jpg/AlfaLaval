@@ -125,7 +125,7 @@ def image_bytes_to_base64(image_bytes):
 
 def load_session_state():
     if not os.path.exists(SESSION_STATE_FILE):
-        return None
+        return 0
 
     try:
         with open(SESSION_STATE_FILE, "r") as f:
@@ -136,7 +136,7 @@ def load_session_state():
         start_time_text = session_state.get("StartTime")
 
         if not lot_number or not operator_name or not start_time_text:
-            return None
+            return 0
 
         start_time = datetime.strptime(start_time_text, "%Y-%m-%d %H:%M:%S")
         expiration_time = start_time + timedelta(hours=SESSION_VALID_HOURS)
@@ -149,10 +149,10 @@ def load_session_state():
                 "ExpirationTime": expiration_time
             }
 
-        return None
+        return 0
 
     except Exception:
-        return None
+        return 0
 
 
 def save_session_state(lot_number, operator_name):
