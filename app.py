@@ -359,7 +359,7 @@ def clear_excel_file():
 st.markdown(
     """
     <h1 style='color:#FFC107; font-size:42px; font-weight:700; margin-bottom:0px;'>
-    Alfa Laval HMI Image Data-Converter
+    UF-1 HMI Image Data-Converter
     </h1>
     """,
     unsafe_allow_html=True
