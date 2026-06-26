@@ -203,7 +203,20 @@ Rules:
 - Extract only the numerical value.
 - Remove units such as bar, %, °C, mS/cm, us/cm.
 - Return numeric values only.
-- If unreadable, return null.
+- If a numeric value cannot be confidently read, return 0.
+
+Never return null for numeric values.
+
+Always return a numeric value.
+
+Examples:
+
+Unreadable pressure = 0
+Unreadable temperature = 0
+Unreadable flow = 0
+Unreadable level = 0
+Unreadable valve position = 0
+Unreadable pump speed = 0
 
 2. For valves:
 - Return OPEN, CLOSED, or PARTIALLY OPEN.
