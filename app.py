@@ -58,7 +58,6 @@ except Exception:
 # =========================================================
 # HMI JSON SCHEMA
 # =========================================================
-
 HMI_SCHEMA = {
     "type": "object",
     "additionalProperties": False,
@@ -66,39 +65,39 @@ HMI_SCHEMA = {
         "Timestamp": {"type": "string"},
         "SourceFile": {"type": "string"},
 
-        "43FT60": {"type": ["number", "null"]},
-        "43CT60": {"type": ["number", "null"]},
-        "41PT60": {"type": ["number", "null"]},
-        "41TT60": {"type": ["number", "null"]},
-        "41TC60": {"type": ["number", "null"]},
-        "42PT60": {"type": ["number", "null"]},
-        "42PC60": {"type": ["number", "null"]},
-        "42DPT60": {"type": ["number", "null"]},
-        "42DPC60": {"type": ["number", "null"]},
-        "44LT60": {"type": ["number", "null"]},
-        "53LT60": {"type": ["number", "null"]},
-        "44LC60": {"type": ["number", "null"]},
-        "53LC60": {"type": ["number", "null"]},
+        "43FT60": {"type": "number"},
+        "43CT60": {"type": "number"},
+        "41PT60": {"type": "number"},
+        "41TT60": {"type": "number"},
+        "41TC60": {"type": "number"},
+        "42PT60": {"type": "number"},
+        "42PC60": {"type": "number"},
+        "42DPT60": {"type": "number"},
+        "42DPC60": {"type": "number"},
+        "44LT60": {"type": "number"},
+        "53LT60": {"type": "number"},
+        "44LC60": {"type": "number"},
+        "53LC60": {"type": "number"},
 
-        "42VC60": {"type": ["string", "null"]},
-        "42VC60_Position": {"type": ["number", "null"]},
-        "72VC60": {"type": ["string", "null"]},
-        "72VC60_Position": {"type": ["number", "null"]},
-        "44VC60": {"type": ["string", "null"]},
-        "44VC60_Position": {"type": ["number", "null"]},
-        "53VC60": {"type": ["string", "null"]},
-        "53VC60_Position": {"type": ["number", "null"]},
+        "42VC60": {"type": "string"},
+        "42VC60_Position": {"type": "number"},
+        "72VC60": {"type": "string"},
+        "72VC60_Position": {"type": "number"},
+        "44VC60": {"type": "string"},
+        "44VC60_Position": {"type": "number"},
+        "53VC60": {"type": "string"},
+        "53VC60_Position": {"type": "number"},
 
-        "43VA40": {"type": ["string", "null"]},
-        "42VA40": {"type": ["string", "null"]},
-        "41VA40": {"type": ["string", "null"]},
+        "43VA40": {"type": "string"},
+        "42VA40": {"type": "string"},
+        "41VA40": {"type": "string"},
 
-        "41PF30": {"type": ["string", "null"]},
-        "41PF30_Speed": {"type": ["number", "null"]},
-        "Cont01": {"type": ["string", "null"]},
+        "41PF30": {"type": "string"},
+        "41PF30_Speed": {"type": "number"},
+        "Cont01": {"type": "string"},
 
-        "Emergency_Stop": {"type": ["string", "null"]},
-        "74PIC60": {"type": ["string", "null"]}
+        "Emergency_Stop": {"type": "string"},
+        "74PIC60": {"type": "string"}
     },
     "required": [
         "Timestamp", "SourceFile",
