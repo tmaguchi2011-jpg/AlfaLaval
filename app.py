@@ -269,7 +269,34 @@ Unreadable pump speed = 0
     )
 
     data = json.loads(response.output_text)
+# ----------------------------------------------------
+# Replace unreadable numeric values (None) with 0
+# ----------------------------------------------------
 
+numeric_fields = [
+    "43FT60",
+    "43CT60",
+    "41PT60",
+    "41TT60",
+    "41TC60",
+    "42PT60",
+    "42PC60",
+    "42DPT60",
+    "42DPC60",
+    "44LT60",
+    "53LT60",
+    "44LC60",
+    "53LC60",
+    "42VC60_Position",
+    "72VC60_Position",
+    "44VC60_Position",
+    "53VC60_Position",
+    "41PF30_Speed"
+]
+
+for field in numeric_fields:
+    if data.get(field) is None:
+        data[field] = 0
     data["OperatorName"] = operator_name
     data["LotNumber"] = lot_number
     data["Timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
