@@ -27,7 +27,7 @@ st.set_page_config(
 # PASSWORD PROTECTION
 # =========================================================
 
-PASSWORD = "LB2026HMI"
+PASSWORD = ""
 
 pwd = st.text_input("Enter Password", type="password")
 
